@@ -1,9 +1,9 @@
 /* --- Our Story / Split Section --- */
 .story-split-section {
-    padding: 140px 0;
+    padding: 60px 0;
     background: #FFFFFF;
-    background-image: radial-gradient(at 0% 0%, rgba(240, 248, 255, 0.5) 0, transparent 50%), 
-                      radial-gradient(at 100% 100%, rgba(228, 240, 250, 0.5) 0, transparent 50%);
+    background-image: radial-gradient(at 0% 0%, rgba(240, 248, 255, 0.5) 0, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(228, 240, 250, 0.5) 0, transparent 50%);
     position: relative;
     overflow: hidden;
 }
@@ -22,7 +22,8 @@
 .story-title-muted {
     font-size: 3.8rem;
     font-weight: 800;
-    color: #CBD5E1; /* Muted but readable slate */
+    color: #CBD5E1;
+    /* Muted but readable slate */
     line-height: 1;
     margin-bottom: 5px;
     letter-spacing: -2px;
@@ -204,8 +205,15 @@
 }
 
 @keyframes float-badge {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 .exp-content {
@@ -247,10 +255,15 @@
         grid-template-columns: 1fr;
         gap: 60px;
     }
-    
-    .story-title-muted { font-size: 3rem; }
-    .story-title-main { font-size: 4.5rem; }
-    
+
+    .story-title-muted {
+        font-size: 3rem;
+    }
+
+    .story-title-main {
+        font-size: 4.5rem;
+    }
+
     .experience-floating-card {
         left: 20px;
         bottom: -20px;
@@ -259,7 +272,7 @@
 
 /* Mission Section */
 .mission-section {
-    padding: 100px 0;
+    padding: 60px 0;
     position: relative;
     z-index: 2;
     overflow: hidden;
@@ -611,10 +624,25 @@
     cursor: pointer;
 }
 
-.funnel-stage.stage-0 { --width: 320px; --color: #06b6d4; }
-.funnel-stage.stage-1 { --width: 260px; --color: #3b82f6; }
-.funnel-stage.stage-2 { --width: 200px; --color: #8b5cf6; }
-.funnel-stage.stage-3 { --width: 140px; --color: #ec4899; }
+.funnel-stage.stage-0 {
+    --width: 320px;
+    --color: #06b6d4;
+}
+
+.funnel-stage.stage-1 {
+    --width: 260px;
+    --color: #3b82f6;
+}
+
+.funnel-stage.stage-2 {
+    --width: 200px;
+    --color: #8b5cf6;
+}
+
+.funnel-stage.stage-3 {
+    --width: 140px;
+    --color: #ec4899;
+}
 
 .funnel-ring {
     width: 100%;
@@ -782,6 +810,7 @@
     display: block;
     margin-bottom: 15px;
 }
+
 /* --- Journey Timeline Styles --- */
 .journey-item {
     display: flex;
@@ -819,6 +848,33 @@
     background: #fff;
     transition: all 0.3s;
     border: 2px solid transparent;
+    position: relative; /* Added for connector positioning */
+}
+
+/* Timeline Connectors */
+.journey-card::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    height: 2px;
+    background: #E2E8F0;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.journey-item:not(.right) .journey-card::before {
+    right: -13.6%; /* Gap is 6% of total, 6/44 = 13.6% of card width */
+    width: 13.6%;
+}
+
+.journey-item.right .journey-card::before {
+    left: -13.6%;
+    width: 13.6%;
+}
+
+.journey-item.active .journey-card::before {
+    background: currentColor; /* Matches the year color set in JSX */
+    height: 3px;
 }
 
 .journey-card-header {
@@ -846,7 +902,9 @@
 }
 
 @media (max-width: 768px) {
-    .journey-item, .journey-item.right {
+
+    .journey-item,
+    .journey-item.right {
         justify-content: flex-start;
         padding-left: 40px;
     }
@@ -869,5 +927,9 @@
     .journey-timeline-line {
         left: 8px !important;
         transform: none !important;
+    }
+    /* Hide connectors on mobile */
+    .journey-card::before {
+        display: none;
     }
 }

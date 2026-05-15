@@ -120,7 +120,7 @@ const LegalPage = () => {
 
   return (
     <main>
-      <div className="container" style={{ paddingTop: '150px', paddingBottom: '100px' }}>
+      <div className="container" style={{ paddingTop: '140px', paddingBottom: '60px' }}>
         <div className="policy-container reveal fade-up">
           <div className="policy-content">
             <h1>{data.title}</h1>

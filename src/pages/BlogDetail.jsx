@@ -108,10 +108,10 @@ const BlogDetail = () => {
   const data = blogData[blogId];
   useReveal();
 
-  if (!data) return <div className="container" style={{paddingTop: '150px'}}>Post not found.</div>;
+  if (!data) return <div className="container" style={{paddingTop: '140px'}}>Post not found.</div>;
 
   return (
-    <main className="post-container" style={{ paddingTop: '150px' }}>
+    <main className="post-container" style={{ paddingTop: '140px' }}>
       <div className="post-header reveal fade-up">
         <span className="post-category">{data.category}</span>
         <h1 className="post-title">{data.title}</h1>

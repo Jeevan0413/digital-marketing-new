@@ -17,7 +17,7 @@ const Footer = () => {
 
   const go = (path) => {
     navigate(path);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   };
 
   const platformLinks = [
@@ -26,15 +26,6 @@ const Footer = () => {
     { label: 'Services', path: '/services', icon: 'fa-rocket' },
     { label: 'Blog', path: '/blog', icon: 'fa-blog' },
     { label: 'Contact', path: '/contact', icon: 'fa-envelope' },
-  ];
-
-  const expertiseLinks = [
-    { label: 'SEO Optimization', path: '/services/seo-optimization', icon: 'fa-magnifying-glass-chart' },
-    { label: 'Social Media Marketing', path: '/services/social-media-marketing', icon: 'fa-share-nodes' },
-    { label: 'PPC Advertising', path: '/services/ppc-advertising', icon: 'fa-bullhorn' },
-    { label: 'Content Marketing', path: '/services/content-marketing', icon: 'fa-pen-nib' },
-    { label: 'Email Marketing', path: '/services/email-marketing', icon: 'fa-envelope-open-text' },
-    { label: 'Web Design & CRO', path: '/services/web-design', icon: 'fa-code' },
   ];
 
   const legalLinks = [
@@ -47,7 +38,7 @@ const Footer = () => {
     { icon: 'fa-brands fa-instagram', href: '#', label: 'Instagram' },
     { icon: 'fa-brands fa-facebook-f', href: '#', label: 'Facebook' },
     { icon: 'fa-brands fa-linkedin-in', href: '#', label: 'LinkedIn' },
-    { icon: 'fa-brands fa-x-twitter', href: '#', label: 'Twitter/X' },
+    { icon: 'fa-brands fa-twitter', href: '#', label: 'Twitter/X' },
     { icon: 'fa-brands fa-youtube', href: '#', label: 'YouTube' },
   ];
 
@@ -114,13 +105,6 @@ const Footer = () => {
                 Hi-Tech City, Hyderabad, India
               </span>
             </div>
-            <div className="social-glass-group">
-              {socials.map(s => (
-                <a key={s.label} href={s.href} className="social-glass-item" aria-label={s.label}>
-                  <i className={s.icon}></i>
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Column 2 – Platform */}
@@ -138,22 +122,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3 – Expertise */}
-          <div className="footer-col">
-            <h4 className="footer-heading">Expertise</h4>
-            <ul className="footer-link-list">
-              {expertiseLinks.map(link => (
-                <li key={link.path}>
-                  <button className="footer-nav-btn" onClick={() => go(link.path)}>
-                    <i className={`fa-solid ${link.icon} fnb-icon`}></i>
-                    {link.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 4 – Support + Trust */}
+          {/* Column 3 – Support */}
           <div className="footer-col">
             <h4 className="footer-heading">Support</h4>
             <ul className="footer-link-list">
@@ -171,6 +140,18 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Column 4 – Socials + Trust */}
+          <div className="footer-col">
+            <h4 className="footer-heading">Follow Us</h4>
+            <div className="social-glass-group" style={{ marginBottom: '30px' }}>
+              {socials.map(s => (
+                <a key={s.label} href={s.href} className="social-glass-item" aria-label={s.label}>
+                  <i className={s.icon}></i>
+                </a>
+              ))}
+            </div>
 
             {/* Trust Badges */}
             <div className="footer-trust-block">

@@ -39,9 +39,18 @@ const industries = [
 ];
 
 const tools = [
-  'Google Analytics', 'SEMrush', 'HubSpot', 'Salesforce',
-  'Meta Ads', 'Mailchimp', 'Ahrefs', 'Hotjar',
-  'Google Ads', 'Klaviyo', 'Webflow', 'Zapier',
+  { name: 'Google Analytics', icon: 'fa-brands fa-google' },
+  { name: 'SEMrush', icon: 'fa-solid fa-chart-simple' },
+  { name: 'HubSpot', icon: 'fa-brands fa-hubspot' },
+  { name: 'Salesforce', icon: 'fa-brands fa-salesforce' },
+  { name: 'Meta Ads', icon: 'fa-brands fa-meta' },
+  { name: 'Mailchimp', icon: 'fa-brands fa-mailchimp' },
+  { name: 'Ahrefs', icon: 'fa-solid fa-magnifying-glass' },
+  { name: 'Hotjar', icon: 'fa-solid fa-fire' },
+  { name: 'Google Ads', icon: 'fa-brands fa-google-plus-g' },
+  { name: 'Klaviyo', icon: 'fa-solid fa-envelope' },
+  { name: 'Webflow', icon: 'fa-solid fa-laptop-code' },
+  { name: 'Zapier', icon: 'fa-solid fa-bolt-lightning' },
 ];
 
 const caseStudies = [
@@ -128,7 +137,7 @@ const Home = () => {
         </div>
         <div className="hero-modern-wrapper">
           <div className="hero-modern-content">
-            <h1 className="reveal mask-reveal" style={{ fontSize: 'clamp(2.4rem, 5.5vw, 4.2rem)', lineHeight: 1.05 }}>
+            <h1 className="reveal mask-reveal" style={{ fontSize: 'clamp(2.4rem, 5.5vw, 4.2rem)', lineHeight: 1.2 }}>
               We turn digital<br /><span className="accent-text">channels into</span><br />growth engines.
             </h1>
             <p className="reveal fade-up text-muted" style={{ transitionDelay: '0.2s', fontSize: '1.1rem', maxWidth: '520px', lineHeight: 1.8, marginBottom: '2rem' }}>
@@ -148,7 +157,7 @@ const Home = () => {
             </div>
             <div className="reveal fade-up" style={{ transitionDelay: '0.55s', marginTop: '2.5rem', display: 'flex', alignItems: 'center', gap: '12px' }}>
               <div style={{ display: 'flex' }}>
-                {['G','M','E','L'].map((l, i) => (
+                {['G', 'M', 'E', 'L'].map((l, i) => (
                   <div key={i} style={{ width: 34, height: 34, borderRadius: '50%', background: 'var(--grad-primary)', border: '2px solid var(--bg-main)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 700, color: '#fff', marginLeft: i > 0 ? -10 : 0 }}>{l}</div>
                 ))}
               </div>
@@ -161,22 +170,22 @@ const Home = () => {
             <div className="orbiting-skills">
               <div className="center-logo"><i className="fa-solid fa-chart-line"></i></div>
               <div className="orbit orbit-inner">
-                <div className="skill-icon" title="SEO"><i className="fa-solid fa-magnifying-glass"></i></div>
-                <div className="skill-icon" title="Content Marketing"><i className="fa-solid fa-pen-nib"></i></div>
-                <div className="skill-icon" title="Email Marketing"><i className="fa-solid fa-envelope-open-text"></i></div>
+                <div className="skill-icon" title="Google SEO"><i className="fa-brands fa-google"></i></div>
+                <div className="skill-icon" title="Meta Ads"><i className="fa-brands fa-meta"></i></div>
+                <div className="skill-icon" title="LinkedIn Marketing"><i className="fa-brands fa-linkedin"></i></div>
               </div>
               <div className="orbit orbit-middle">
-                <div className="skill-icon" title="Social Media"><i className="fa-brands fa-instagram"></i></div>
-                <div className="skill-icon" title="Web Design"><i className="fa-solid fa-code"></i></div>
-                <div className="skill-icon" title="PPC Advertising"><i className="fa-solid fa-bullhorn"></i></div>
-                <div className="skill-icon" title="Analytics"><i className="fa-solid fa-chart-pie"></i></div>
+                <div className="skill-icon" title="Analytics"><i className="fa-solid fa-chart-simple"></i></div>
+                <div className="skill-icon" title="Content Strategy"><i className="fa-solid fa-pen-nib"></i></div>
+                <div className="skill-icon" title="Email Marketing"><i className="fa-solid fa-envelope-open-text"></i></div>
+                <div className="skill-icon" title="TikTok Ads"><i className="fa-brands fa-tiktok"></i></div>
               </div>
               <div className="orbit orbit-outer">
+                <div className="skill-icon" title="Growth Hacking"><i className="fa-solid fa-arrow-trend-up"></i></div>
                 <div className="skill-icon" title="Strategy"><i className="fa-solid fa-lightbulb"></i></div>
-                <div className="skill-icon" title="Branding"><i className="fa-solid fa-fingerprint"></i></div>
-                <div className="skill-icon" title="Growth"><i className="fa-solid fa-rocket"></i></div>
-                <div className="skill-icon" title="Video Marketing"><i className="fa-solid fa-video"></i></div>
-                <div className="skill-icon" title="E-commerce"><i className="fa-solid fa-bag-shopping"></i></div>
+                <div className="skill-icon" title="Web Conversion"><i className="fa-solid fa-code"></i></div>
+                <div className="skill-icon" title="Video Marketing"><i className="fa-solid fa-play"></i></div>
+                <div className="skill-icon" title="Shopify / E-comm"><i className="fa-brands fa-shopify"></i></div>
               </div>
             </div>
           </div>
@@ -185,38 +194,25 @@ const Home = () => {
 
       {/* TOOLS MARQUEE */}
       <div style={{ background: 'var(--primary-color)', padding: '14px 0', overflow: 'hidden' }}>
-        <Marquee speed={25}>
+        <Marquee speed={50}>
           {tools.map((t, i) => (
-            <span key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: 10, marginRight: 48, color: '#fff', fontSize: '0.82rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap' }}>
-              <i className="fa-solid fa-circle" style={{ fontSize: '4px', opacity: 0.6 }}></i>{t}
+            <span key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: 12, marginRight: 60, color: '#fff', fontSize: '0.85rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap' }}>
+              <i className={t.icon} style={{ fontSize: '1rem', opacity: 0.9 }}></i>
+              {t.name}
             </span>
           ))}
         </Marquee>
       </div>
 
-      {/* STATS */}
-      <section className="reveal bg-soft-1" style={{ padding: '80px 20px' }}>
-        <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
-            {stats.map((s, i) => (
-              <div key={i} className="reveal fade-up" style={{ transitionDelay: `${i * 0.1}s`, textAlign: 'center', padding: '40px 24px', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: 'var(--radius-md)', backdropFilter: 'blur(12px)' }}>
-                <i className={`fa-solid ${s.icon}`} style={{ fontSize: '1.6rem', color: 'var(--primary-color)', marginBottom: 14, display: 'block' }}></i>
-                <div style={{ fontSize: '2.8rem', fontWeight: 900, color: 'var(--text-main)', fontFamily: 'var(--font-heading)', lineHeight: 1 }}>
-                  <Counter target={s.value} />{s.suffix}
-                </div>
-                <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: 8, fontWeight: 500 }}>{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      <div className="divider divider-with-text divider-gradient reveal fade-in-up"><span className="divider-text">What We Do</span></div>
+
+
 
       {/* SERVICES */}
       <section className="reveal bg-soft-1" style={{ padding: 'var(--section-padding)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <span className="section-badge reveal fade-up">What We Do</span>
             <h2 className="section-title reveal fade-up">Full-Spectrum Digital Marketing</h2>
             <p className="section-subtitle reveal fade-up" style={{ transitionDelay: '0.1s' }}>Every service is built on data, managed by certified specialists, and measured against real business outcomes.</p>
           </div>
@@ -247,12 +243,13 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="divider divider-with-text reveal fade-in-up"><span className="divider-text">Our Process</span></div>
+
 
       {/* PROCESS */}
       <section className="reveal bg-soft-1" style={{ padding: 'var(--section-padding)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <span className="section-badge reveal fade-up">Our Process</span>
             <h2 className="section-title">How We Grow Your Business</h2>
             <p className="section-subtitle">A proven 4-step framework that turns strategy into measurable results.</p>
           </div>
@@ -272,12 +269,13 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="divider divider-with-text reveal fade-in-up"><span className="divider-text">Case Studies</span></div>
+
 
       {/* CASE STUDIES */}
       <section className="reveal bg-soft-1" style={{ padding: 'var(--section-padding)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+            <span className="section-badge reveal fade-up">Case Studies</span>
             <h2 className="section-title">Real Results, Real Businesses</h2>
             <p className="section-subtitle">Case studies from clients who trusted us to grow their digital revenue.</p>
           </div>
@@ -322,13 +320,16 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="divider divider-with-text reveal fade-in-up"><span className="divider-text">Why Choose Us</span></div>
+
 
       {/* WHY CHOOSE US */}
       <section className="why-choose reveal bg-soft-1">
         <div className="container">
-          <h2 className="section-title">Built Different. Built to Perform.</h2>
-          <p className="section-subtitle">Six reasons fast-growing brands choose LearnSpace Digital over the competition.</p>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span className="section-badge reveal fade-up">Why Choose Us</span>
+            <h2 className="section-title">Built Different. Built to Perform.</h2>
+            <p className="section-subtitle">Six reasons fast-growing brands choose LearnSpace Digital over the competition.</p>
+          </div>
           <div className="features-grid stagger-container">
             {[
               { icon: 'fa-users-gear', title: 'Certified Specialists', desc: 'Every channel managed by a certified expert — Google, Meta, HubSpot, and SEMrush certified practitioners on your account.' },
@@ -347,12 +348,13 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="divider divider-with-text reveal fade-in-up"><span className="divider-text">Industries We Serve</span></div>
+
 
       {/* INDUSTRIES */}
-      <section className="reveal bg-soft-1" style={{ padding: '80px 20px' }}>
+      <section className="reveal bg-soft-1" style={{ padding: '60px 20px' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+            <span className="section-badge reveal fade-up">Industries We Serve</span>
             <h2 className="section-title">Deep Industry Expertise</h2>
             <p className="section-subtitle">We understand your market, your customers, and your competitive landscape before strategy is even written.</p>
           </div>
@@ -370,13 +372,16 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="divider divider-with-text reveal fade-in-up"><span className="divider-text">Our History</span></div>
+
 
       {/* JOURNEY */}
-      <section className="timeline-section bg-soft-1" style={{ padding: '100px 0', position: 'relative', zIndex: 1 }}>
+      <section className="timeline-section bg-soft-1" style={{ padding: '60px 0', position: 'relative', zIndex: 1 }}>
         <div className="container">
-          <h2 className="section-title">Our Journey</h2>
-          <p className="section-subtitle">From a three-person startup to a globally recognised growth agency.</p>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span className="section-badge reveal fade-up">Our History</span>
+            <h2 className="section-title">Our Journey</h2>
+            <p className="section-subtitle">From a three-person startup to a globally recognised growth agency.</p>
+          </div>
           <div className="funnel-journey-wrapper">
             <div className="funnel-viz-container">
               <div className="funnel-viz">
@@ -400,13 +405,16 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="divider divider-with-text reveal fade-in-up"><span className="divider-text">Client Love</span></div>
+
 
       {/* TESTIMONIALS */}
       <section className="testimonials reveal bg-soft-1">
         <div className="container">
-          <h2 className="section-title">Trusted by 500+ Brands</h2>
-          <p className="section-subtitle">Real feedback from real clients who have seen real results.</p>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span className="section-badge reveal fade-up">Client Love</span>
+            <h2 className="section-title">Trusted by 500+ Brands</h2>
+            <p className="section-subtitle">Real feedback from real clients who have seen real results.</p>
+          </div>
           <div className="testimonial-slider">
             <div className="testimonial-track">
               {[...testimonials, ...testimonials].map((review, idx) => (
@@ -425,7 +433,7 @@ const Home = () => {
       </section>
 
       {/* CTA BANNER */}
-      <section className="reveal" style={{ padding: '80px 20px' }}>
+      <section className="reveal" style={{ padding: '60px 20px' }}>
         <div className="container">
           <div style={{ background: 'var(--grad-primary)', borderRadius: 'var(--radius-lg)', padding: 'clamp(40px, 6vw, 80px)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', top: -60, right: -60, width: 240, height: 240, background: 'rgba(255,255,255,0.12)', borderRadius: '50%' }}></div>
@@ -454,13 +462,16 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="divider divider-with-text reveal fade-in-up"><span className="divider-text">Get In Touch</span></div>
+
 
       {/* CONTACT */}
       <section id="contact" className="contact reveal bg-soft-1">
         <div className="container">
-          <h2 className="section-title">Start a Conversation</h2>
-          <p className="section-subtitle">Whether you are ready to launch or just exploring options — we would love to hear from you.</p>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span className="section-badge reveal fade-up">Get In Touch</span>
+            <h2 className="section-title">Start a Conversation</h2>
+            <p className="section-subtitle">Whether you are ready to launch or just exploring options — we would love to hear from you.</p>
+          </div>
           <div className="contact-wrapper">
             <div className="contact-info">
               <h3>Get In Touch</h3>
@@ -497,13 +508,16 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="divider divider-with-text reveal fade-in-up"><span className="divider-text">FAQ</span></div>
+
 
       {/* FAQ */}
       <section className="faq-section reveal bg-soft-1">
         <div className="container">
-          <h2 className="section-title">Frequently Asked Questions</h2>
-          <p className="section-subtitle">Everything you need to know before we start working together.</p>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span className="section-badge reveal fade-up">FAQ</span>
+            <h2 className="section-title">Frequently Asked Questions</h2>
+            <p className="section-subtitle">Everything you need to know before we start working together.</p>
+          </div>
           <div className="faq-container">
             <div className="faq-list">
               {faqs.map((faq, idx) => (

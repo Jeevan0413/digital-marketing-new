@@ -198,12 +198,13 @@ const ServiceDetail = () => {
         </div>
       </section>
 
-      <div className="divider divider-with-text reveal fade-in-up">
-        <span className="divider-text">Core Pillars</span>
-      </div>
+
       <section className="why-choose reveal bg-soft-2">
         <div className="container">
-          <h2 className="section-title">{data.pillarsTitle}</h2>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span className="section-badge reveal fade-up">Core Pillars</span>
+            <h2 className="section-title">{data.pillarsTitle}</h2>
+          </div>
           <div className="features-grid stagger-container">
             {data.pillars.map((pillar, idx) => (
               <div key={idx} className="feature-item">
@@ -218,12 +219,13 @@ const ServiceDetail = () => {
         </div>
       </section>
 
-      <div className="divider divider-with-text reveal fade-in-up">
-        <span className="divider-text">Our Process</span>
-      </div>
+
       <section id="process" className="about reveal bg-soft-1">
         <div className="container">
-          <h2 className="section-title">🔹 {data.processTitle}</h2>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span className="section-badge reveal fade-up">Our Process</span>
+            <h2 className="section-title">🔹 {data.processTitle}</h2>
+          </div>
           <div className="about-grid">
             <div className="about-image">
               <img src={data.processImg} alt="Process" />
@@ -240,12 +242,13 @@ const ServiceDetail = () => {
         </div>
       </section>
 
-      <div className="divider divider-with-text reveal fade-in-up">
-        <span className="divider-text">Results</span>
-      </div>
+
       <section className="testimonials reveal bg-soft-2">
         <div className="container">
-          <h2 className="section-title">{data.resultsTitle}</h2>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <span className="section-badge reveal fade-up">Results</span>
+            <h2 className="section-title">{data.resultsTitle}</h2>
+          </div>
           <div className="about-stats">
             {data.stats.map((stat, idx) => (
               <div key={idx} className="stat-card">

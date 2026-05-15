@@ -34,12 +34,12 @@ const Contact = () => {
   return (
     <main>
       {/* HERO */}
-      <section className="mesh-gradient" style={{ padding: '130px 20px 80px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+      <section className="mesh-gradient" style={{ padding: '140px 20px 60px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '10%', left: '5%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(99,102,241,0.1) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', bottom: '10%', right: '8%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(2,136,209,0.08) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }} />
         <div className="container" style={{ maxWidth: '720px', position: 'relative' }}>
           <span className="badge" style={{ marginBottom: '20px' }}>Let's Talk Growth</span>
-          <h1 style={{ fontSize: 'clamp(2.4rem, 5vw, 4rem)', lineHeight: 1.1, marginBottom: '24px', color: 'var(--text-main)' }}>
+          <h1 style={{ fontSize: 'clamp(2.4rem, 5vw, 4rem)', lineHeight: 1.2, marginBottom: '24px', color: 'var(--text-main)' }}>
             Start Your <span className="highlight gradient-text">Growth Conversation</span>
           </h1>
           <p style={{ fontSize: '1.15rem', color: 'var(--text-muted)', lineHeight: 1.8, maxWidth: '580px', margin: '0 auto' }}>
@@ -58,7 +58,7 @@ const Contact = () => {
       </section>
 
       {/* MAIN CONTACT AREA */}
-      <section className="bg-soft-1" style={{ padding: '80px 20px 120px' }}>
+      <section className="bg-soft-1" style={{ padding: '40px 20px 60px' }}>
         <div className="container" style={{ maxWidth: '1100px' }}>
           <div className="contact-grid">
 
@@ -209,7 +209,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ */}
-      <section style={{ padding: '100px 20px', background: '#fff' }}>
+      <section style={{ padding: '40px 20px', background: '#fff' }}>
         <div className="container" style={{ maxWidth: '760px' }}>
           <span className="badge" style={{ display: 'block', width: 'fit-content', margin: '0 auto 16px' }}>FAQ</span>
           <h2 className="section-title">Frequently Asked Questions</h2>
@@ -234,7 +234,7 @@ const Contact = () => {
       </section>
 
       {/* BOTTOM CTA */}
-      <section style={{ padding: '100px 20px', background: 'linear-gradient(135deg, var(--primary-color) 0%, #6366F1 100%)', textAlign: 'center' }}>
+      <section style={{ padding: '40px 20px', background: 'linear-gradient(135deg, var(--primary-color) 0%, #6366F1 100%)', textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '640px' }}>
           <h2 style={{ color: '#fff', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', marginBottom: '16px', fontWeight: 800 }}>Still Deciding?</h2>
           <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.1rem', marginBottom: '40px', lineHeight: 1.7 }}>

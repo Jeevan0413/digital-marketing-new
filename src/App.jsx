@@ -13,11 +13,13 @@ import LegalPage from './pages/LegalPage';
 import './assets/styles/style.css';
 import './assets/styles/whatsapp_styles.css';
 import useAdvancedAnimations from './hooks/useAdvancedAnimations';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   useAdvancedAnimations();
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-container">
         <Navbar />
         <Routes>

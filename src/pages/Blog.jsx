@@ -28,11 +28,11 @@ const Blog = () => {
   return (
     <main>
       {/* HERO */}
-      <section className="mesh-gradient" style={{ padding: '130px 20px 80px', position: 'relative', overflow: 'hidden' }}>
+      <section className="mesh-gradient" style={{ padding: '140px 20px 80px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '15%', right: '10%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(2,136,209,0.1) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }} />
         <div className="container" style={{ maxWidth: '800px', textAlign: 'center' }}>
-          <span className="badge" style={{ marginBottom: '20px' }}>Digital Marketing Insights</span>
-          <h1 style={{ fontSize: 'clamp(2.4rem, 5vw, 4rem)', lineHeight: 1.1, marginBottom: '24px', color: 'var(--text-main)' }}>
+          <span className="section-badge reveal fade-up" style={{ marginBottom: '20px' }}>Digital Marketing Insights</span>
+          <h1 style={{ fontSize: 'clamp(2.4rem, 5vw, 4rem)', lineHeight: 1.2, marginBottom: '24px', color: 'var(--text-main)' }}>
             Insights That <span className="highlight gradient-text">Move the Needle</span>
           </h1>
           <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', lineHeight: 1.8, maxWidth: '600px', margin: '0 auto 40px' }}>
@@ -53,7 +53,7 @@ const Blog = () => {
       </section>
 
       {/* FEATURED POST */}
-      <section style={{ padding: '0 20px 80px', background: '#fff' }}>
+      <section style={{ padding: '0 20px 60px', background: '#fff' }}>
         <div className="container">
           <div className="blog-featured-card">
             <div style={{ position: 'relative', overflow: 'hidden' }}>
@@ -86,7 +86,7 @@ const Blog = () => {
       </section>
 
       {/* FILTER + GRID */}
-      <section style={{ padding: '20px 20px 120px', background: 'var(--bg-dark-slate)' }}>
+      <section style={{ padding: '20px 20px 80px', background: 'var(--bg-dark-slate)' }}>
         <div className="container">
           {/* Category Filter */}
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '48px', justifyContent: 'center' }}>
@@ -146,7 +146,7 @@ const Blog = () => {
           )}
 
           {/* Newsletter CTA */}
-          <div style={{ marginTop: '80px', padding: '60px 52px', borderRadius: '28px', background: 'linear-gradient(135deg, var(--primary-color) 0%, #6366F1 100%)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ marginTop: '60px', padding: '40px 52px', borderRadius: '28px', background: 'linear-gradient(135deg, var(--primary-color) 0%, #6366F1 100%)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '200px', height: '200px', background: 'rgba(255,255,255,0.05)', borderRadius: '50%', pointerEvents: 'none' }} />
             <div style={{ position: 'absolute', bottom: '-60px', left: '-60px', width: '280px', height: '280px', background: 'rgba(255,255,255,0.04)', borderRadius: '50%', pointerEvents: 'none' }} />
             <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '12px', position: 'relative' }}>Get Weekly Marketing Intelligence</h3>

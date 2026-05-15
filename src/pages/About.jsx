@@ -29,9 +29,9 @@ const journey = [
 ];
 
 const team = [
-  { name: "Raghu Vamshi", role: "Founder & CEO", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80", quote: "Growth is not accidental — it's engineered.", specialty: "Performance Strategy" },
-  { name: "Varalaxmi", role: "Head of Strategy & COO", img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80", quote: "Data tells stories. We help brands write better ones.", specialty: "Data & Analytics" },
-  { name: "Shridhar Kulkarni", role: "Creative Director", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80", quote: "Creativity without strategy is just decoration.", specialty: "Brand & Creative" },
+  { name: 'Raghu Vamshi', role: 'Founder & CEO', img: 'https://www.shutterstock.com/image-illustration/ceo-icon-manager-illustartion-600nw-1857126589.jpg', quote: 'Visionary leader with 11+ years driving digital strategy for global brands.', specialty: "Performance Strategy" },
+  { name: 'Varalaxmi', role: 'Head of Strategy & COO', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvXea5d-MNkRufdRao2cItjnxVtTn9xkP1j1yocFmPgQ&s', quote: 'Operations maestro ensuring every campaign runs on time, on budget, and over target.', specialty: "Data & Analytics" },
+  { name: 'Shridhar Kulkarni', role: 'Creative Director', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRlxzr_XTrP3GHTNMhvQcfIbSfBLrq0A5XBw&s', quote: 'Award-winning designer translating brand stories into striking digital experiences.', specialty: "Brand & Creative" },
 ];
 
 const values = [
@@ -77,13 +77,13 @@ const About = () => {
   return (
     <main>
       {/* HERO */}
-      <section className="hero-v2 reveal zoom-in mesh-gradient" style={{ minHeight: '52vh', padding: '130px 20px 100px', position: 'relative', overflow: 'hidden' }}>
+      <section className="hero-v2 reveal zoom-in mesh-gradient" style={{ minHeight: '52vh', padding: '140px 20px 80px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '20%', right: '8%', width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', bottom: '10%', left: '5%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(2,136,209,0.1) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }} />
         <div className="container hero-v2-container">
           <div className="hero-v2-card" style={{ maxWidth: '720px' }}>
-            <span className="badge" style={{ marginBottom: '20px' }}>About LearnSpace Digital</span>
-            <h1 style={{ fontSize: 'clamp(2.4rem, 5vw, 4.2rem)', lineHeight: 1.1, marginBottom: '24px' }}>
+            <span className="section-badge reveal fade-up" style={{ marginBottom: '20px' }}>About LearnSpace Digital</span>
+            <h1 style={{ fontSize: 'clamp(2.4rem, 5vw, 4.2rem)', lineHeight: 1.2, marginBottom: '24px' }}>
               The Team That Turns <span className="highlight gradient-text">Strategy Into Revenue</span>
             </h1>
             <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', maxWidth: '600px', lineHeight: 1.8 }}>
@@ -119,7 +119,7 @@ const About = () => {
         
         <div className="container story-split-container" style={{ position: 'relative', zIndex: 2 }}>
           <div className="story-content-side">
-            <span className="badge badge-primary reveal fade-up">Our Story</span>
+            <span className="section-badge reveal fade-up">Our Story</span>
             <div className="story-header reveal fade-up" style={{ transitionDelay: '0.1s' }}>
               <h2 className="story-title-muted">Fueling Brands with</h2>
               <h2 className="story-title-main">
@@ -187,9 +187,9 @@ const About = () => {
       </section>
 
       {/* JOURNEY TIMELINE */}
-      <section className="bg-soft-1 reveal fade-in-up" style={{ padding: '120px 20px' }}>
+      <section className="bg-soft-1 reveal fade-in-up" style={{ padding: '60px 20px' }}>
         <div className="container">
-          <span className="badge" style={{ display: 'block', width: 'fit-content', margin: '0 auto 16px' }}>Our Journey</span>
+          <span className="section-badge reveal fade-up" style={{ display: 'block', width: 'fit-content', margin: '0 auto 16px' }}>Our Journey</span>
           <h2 className="section-title">A Decade of Digital Excellence</h2>
           <p className="section-subtitle">Five milestones that shaped who we are today.</p>
           <div style={{ position: 'relative', marginTop: '60px', maxWidth: '860px', margin: '60px auto 0' }}>
@@ -211,7 +211,7 @@ const About = () => {
       </section>
 
       {/* MISSION */}
-      <section id="mission" className="mission-section bg-soft-1" style={{ padding: '100px 20px' }}>
+      <section id="mission" className="mission-section bg-soft-1" style={{ padding: '60px 20px' }}>
         <div className="mission-container">
           <div className="mission-visual-side">
             <div className="rocket-container">
@@ -232,7 +232,7 @@ const About = () => {
             </div>
           </div>
           <div className="mission-text-side">
-            <span className="badge" style={{ marginBottom: '20px' }}>Our Mission</span>
+            <span className="section-badge reveal fade-up" style={{ marginBottom: '20px' }}>Our Mission</span>
             <h2>Transforming Ambition Into <span className="highlight">Digital Reality</span></h2>
             <p>We empower businesses of every size with bold, data-backed digital strategies that create lasting impact — converting ambition into measurable, scalable revenue growth.</p>
             <div className="mission-pillars">
@@ -245,9 +245,9 @@ const About = () => {
       </section>
 
       {/* TEAM */}
-      <section className="bg-soft-2 reveal" style={{ padding: '120px 20px' }}>
+      <section className="bg-soft-2 reveal" style={{ padding: '60px 20px' }}>
         <div className="container">
-          <span className="badge" style={{ display: 'block', width: 'fit-content', margin: '0 auto 16px' }}>The Team</span>
+          <span className="section-badge reveal fade-up" style={{ display: 'block', width: 'fit-content', margin: '0 auto 16px' }}>The Team</span>
           <h2 className="section-title">The Minds Behind LearnSpace</h2>
           <p className="section-subtitle">Strategists, creatives, and data scientists — united by one obsession: your growth.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px', marginTop: '60px' }}>
@@ -275,9 +275,9 @@ const About = () => {
       </section>
 
       {/* VALUES */}
-      <section className="bg-soft-1" style={{ padding: '120px 20px' }}>
+      <section className="bg-soft-1" style={{ padding: '60px 20px' }}>
         <div className="container">
-          <span className="badge" style={{ display: 'block', width: 'fit-content', margin: '0 auto 16px' }}>What Drives Us</span>
+          <span className="section-badge reveal fade-up" style={{ display: 'block', width: 'fit-content', margin: '0 auto 16px' }}>What Drives Us</span>
           <h2 className="section-title">Our Core Values</h2>
           <p className="section-subtitle">The principles that guide every strategy, every campaign, every day.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '28px', marginTop: '60px' }}>
@@ -300,12 +300,12 @@ const About = () => {
       {/* TESTIMONIALS */}
       <section className="testimonials reveal bg-soft-2" style={{ padding: '100px 0' }}>
         <div className="container" style={{ maxWidth: '100%', padding: 0 }}>
-          <span className="badge" style={{ display: 'block', width: 'fit-content', margin: '0 auto 16px' }}>Client Love</span>
+          <span className="section-badge reveal fade-up" style={{ display: 'block', width: 'fit-content', margin: '0 auto 16px' }}>Client Love</span>
           <h2 className="section-title" style={{ padding: '0 20px' }}>What Our Clients Say</h2>
           <p className="section-subtitle" style={{ padding: '0 20px' }}>Real results. Real relationships. Real praise.</p>
           <Marquee speed={40} pauseOnHover={true}>
             {reviews.map((review, idx) => (
-              <div key={idx} style={{ width: '420px', flexShrink: 0, opacity: 1, transform: 'none', padding: '32px', borderRadius: '20px', background: '#fff', boxShadow: '0 4px 20px rgba(0,0,0,0.07)', border: '1px solid rgba(99,102,241,0.1)' }}>
+              <div key={idx} className="review-card">
                 <div style={{ display: 'flex', gap: '4px', marginBottom: '16px' }}>
                   {[...Array(5)].map((_, i) => (<i key={i} className="fa-solid fa-star" style={{ color: '#F59E0B', fontSize: '0.9rem' }}></i>))}
                 </div>

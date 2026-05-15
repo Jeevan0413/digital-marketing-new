@@ -155,6 +155,7 @@ const Services = () => {
       <section id="services-grid" className="svc-main-section bg-soft-2">
         <div className="container">
           <div className="svc-section-head reveal fade-up">
+            <span className="section-badge">Our Services</span>
             <h2 className="section-title">What We Do Best</h2>
             <p className="section-subtitle">Click any service to explore in depth — or view all at once.</p>
           </div>
@@ -209,6 +210,7 @@ const Services = () => {
       <section className="svc-process-section bg-soft-1">
         <div className="container">
           <div className="svc-section-head reveal fade-up">
+            <span className="section-badge">How We Work</span>
             <h2 className="section-title">Our Proven Process</h2>
             <p className="section-subtitle">A repeatable framework that turns your goals into measurable outcomes.</p>
           </div>
@@ -235,6 +237,7 @@ const Services = () => {
       <section className="svc-cases-section bg-soft-2" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
         <div className="container">
           <div className="svc-section-head reveal fade-up">
+            <span className="section-badge">Success Stories</span>
             <h2 className="section-title">Success Stories</h2>
             <p className="section-subtitle">Real results delivered for real businesses across every industry.</p>
           </div>
@@ -277,6 +280,7 @@ const Services = () => {
       <section className="svc-team-section bg-soft-1">
         <div className="container">
           <div className="svc-section-head reveal fade-up">
+            <span className="section-badge">Our Team</span>
             <h2 className="section-title">The Minds Behind LearnSpace</h2>
             <p className="section-subtitle">Seasoned specialists who live and breathe digital marketing.</p>
           </div>
